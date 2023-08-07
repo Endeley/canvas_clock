@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: lightsalmon;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 60px;
+    background: transparent;
+    width: 70px;
+    z-index: 2;
+}
+
+.clock {
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    border-radius: 50%;
+    border: 5px solid green;
+    box-shadow: 1px 2px 4px lightgreen;
+}
+
+.numbers div {
+    position: absolute;
+    font-size: 27px;
+    font-weight: bolder;
+    color: green;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.twelve {
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three {
+    right: 6px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.nine {
+    left: 6px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.six {
+    bottom: 15px;
+    left: 50%;
+    transform: translatex(50%);
+}
+
+.hands {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.hands::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    border-radius: 50%;
+    border: 1px solid red;
+    z-index: 4;
+}
+.hands div {
+    width: 7px;
+    position: absolute;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+    border-radius: 50% 50% 00;
+    box-shadow: 0.1px 0.1px 1px green;
+}
+
+.hour {
+    background-color: green;
+    height: 120px;
+    transform: rotate(120deg);
+    box-shadow: 2px 2px 4px red;
+}
+.minute {
+    background-color: red;
+    height: 150px;
+    transform: rotate(280deg);
+    box-shadow: 1px 1px 2px green;
+}
+.second {
+    background-color: red;
+    height: 170px;
+    transform: rotate(360deg);
+    box-shadow: 1px 1px 2px green;
+}
